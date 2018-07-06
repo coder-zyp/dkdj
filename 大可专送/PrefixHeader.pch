@@ -1,0 +1,71 @@
+//
+//  PrefixHeader.pch
+//  大可专送
+//
+//  Created by 张允鹏 on 2016/11/26.
+//  Copyright © 2016年 张允鹏. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+#define APP_ORAGNE [UIColor colorWithRed:246.0/255.0 green:135.0/255.0 blue:36.0/255.0 alpha:1]
+#define APP_GARY [UIColor colorWithRed:241.0/255.0 green:241.0/255.0 blue:241.0/255.0 alpha:1]
+#define APP_BLUE [UIColor colorWithRed:0.0/255.0 green:216.0/255.0 blue:216.0/255.0 alpha:1]
+
+#define APP_URL @"http://www.gjqb110.com/App/Cpaotui/"
+
+
+
+
+#define APP_USERID [[NSUserDefaults standardUserDefaults] objectForKey:@"userId"]
+#define APP_HIS_ADDS [[NSUserDefaults standardUserDefaults] objectForKey:@"historyAddressArray"]
+#define APP_NAME [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"]
+#define MAS_SHORTHAND
+
+
+#define APP_DELEGATA  ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define DEVICE_WIDTH [UIScreen mainScreen].bounds.size.width
+#define DEVICE_HEIGHT [UIScreen mainScreen].bounds.size.height
+#import "SDAutoLayout.h"
+#import <UIKit/UIKit.h>
+#import "UIView+Extension.h"
+#import "cityListModel.h"
+#import "RequestBaseTool.h"
+#import <SVProgressHUD.h>
+#import <MJExtension/MJExtension.h>
+
+#define px(x) x/2.0f*scaleX1
+#define scaleX1 MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)/375.0f
+#define scaleX MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)/375.0f
+#define WT_RGBColor(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define NavBarHeight 44.0
+
+#define TabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>30?83:49)
+
+#define TopHeight (StatusBarHeight + NavBarHeight)
+#define StatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+
+#define px_scale(x) x/2.0f*scaleX1
+// 判断是否为 iPhone 4
+#define iPhone4 [[UIScreen mainScreen] bounds].size.width == 320.0f && [[UIScreen mainScreen] bounds].size.height == 480.0f
+// 判断是否为 iPhone 5
+#define iPhone5 [[UIScreen mainScreen] bounds].size.width == 320.0f && [[UIScreen mainScreen] bounds].size.height == 568.0f
+// 判断是否为iPhone 6/6s
+#define iPhone6_6s [[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 667.0f
+// 判断是否为iPhone 6Plus/6sPlus
+#define iPhone6Plus_6sPlus [[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 736.0f
+
+#import "Masonry.h"
+#import "MBProgressHUD.h"
+#import "AFNetworking.h"
+//==================================∫
+#import "SDImageCache.h"
+#import "AFRequstManager.h"
+#import "UIImageView+WebCache.h"
+#import "NSDictionary+ZJson.h"
+#import "NSObject+FCShowMsg.h"
+//==================================
+#endif /* PrefixHeader_pch */
